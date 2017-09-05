@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TheMonitor1765</title>
+    <%= csrf_meta_tags %>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <div class="header">
+      <div class="container">
+        <%= link_to(root_path) do %>
+          <h1>The <span class="dark">M</span>onitor <span class="light">1765</h1>
+        <% end %>
+
+        <div class="nav">
+
+          <% if current_user %>
+            <ul>
+              <li><%= current_user.email %></li>
+              <li><%= link_to "Profile", '/profile'%></li>
+              <li><%= link_to "new article", new_article_path %></li>
+              <li><%= link_to "Log out", destroy_user_session_path, method: "delete" %></li>
+            </ul>
+          <% else %>
+            <ul>
+              <li><%= link_to "Login", new_user_session_path %></li>
+              <li><%= link_to "Signup", new_user_registration_path %></li>
+            </ul>
+          <% end %>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+    <%= yield %>
+  </body>
+</html>

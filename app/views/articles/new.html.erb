@@ -1,0 +1,17 @@
+<div class="new-article">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+
+        <%= form_for(@article) do |f| %>
+          <%= f.text_field :title, placeholder: "Title" %>
+          <%= f.text_field :author, placeholder: "Author" %>
+          <%= f.text_area :body, placeholder: "Main Article" %>
+
+          <%= f.submit "Save" %>
+        <% end %>
+        
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="signup">
+  <div class="container">
+    <h1>Sign up</h1>
+    <%= form_for @user, url: new_user_registration_path do |f|%>
+
+        <%= f.label :first_name, "First name"%>
+        <%= f.text_field :first_name, placeholder: "Firstname" %>
+
+        <%= f.label :last_name, "Last name"%>
+        <%= f.text_field :last_name, placeholder: "Lastname" %>
+
+        <%= f.label :email, "Email Address"%>
+        <%= f.email_field :email, placeholder: "Email" %>
+
+        <%= f.label :password, "Password"%>
+        <%= f.password_field :password, placeholder: "Password" %>
+
+        <%= f.submit "Submit", class: "btn-submit"%>
+
+    <% end %>
+  </div>
+</div>

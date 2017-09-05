@@ -1,0 +1,8 @@
+<div class="article">
+  <div class="container">
+    <p class="date"><%= @new.created_at.strftime('%b %d') %></p>
+    <h2><%= @new.title %></h2>
+    <p class="author">by <%= @new.author %></p>
+    <p class="article_content"><%= @new.body %></p>
+  </div>
+</div>
