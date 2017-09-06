@@ -136,6 +136,18 @@
    width: 200px;
  }
 
+ .lside {
+   width: 45%;
+   float:left;
+   height: 600px;
+ }
+
+ .rside {
+   width: 45%;
+   float: right;
+   height: 600px;
+ }
+
  .article a {
    text-decoration: none;
  }
