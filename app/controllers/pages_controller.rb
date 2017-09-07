@@ -1,8 +1,13 @@
 class PagesController < ApplicationController
   def index
     @news = New.all
-    @articles = Article.all.order(created_at: :desc).limit(2)
-    @articles_side = Article.all.order('user_id').limit(2)
+    @user = current_user
+    @articles = Article.order(created_at: :desc).limit(2)
+    if current_user
+      @articles_side = @user.articles.limit(2)
+    else
+      @articles_side = Article.order(updated_at: :desc).limit(2)
+    end
   end
 
   def profile
