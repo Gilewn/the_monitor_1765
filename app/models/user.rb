@@ -5,4 +5,14 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :articles, dependent: :destroy
+  belongs_to :role
+  before_create :set_default_role
+  # or
+  # before_validation :set_default_role
+
+  private
+
+  def set_default_role
+    self.role ||= Role.find_by_name('viewer')
+  end
 end
