@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= f.label :role %><br />
-    <%= f.collection_select(:role_id, Role.all, :id, :name) %>
+    <%= f.collection_select :role_id, Role.all, :name, :name %>
   </div>
 
   <div class="actions">
