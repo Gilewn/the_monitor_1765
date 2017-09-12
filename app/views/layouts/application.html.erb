@@ -27,7 +27,9 @@
             <ul>
               <li><%= current_user.email %></li>
               <li><%= link_to "Profile", '/profile'%></li>
+                <% unless current_user.role.name == 'viewer' %>
               <li><%= link_to "new article", new_article_path %></li>
+              <li><% end %></li>
               <li><%= link_to "Log out", destroy_user_session_path, method: "delete" %></li>
             </ul>
           <% else %>

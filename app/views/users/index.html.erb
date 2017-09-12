@@ -1,0 +1,15 @@
+<div class="aticles">
+  <div class="container">
+    <% @users.each do |user| %>
+    <div class="article">
+      <p class="date"><%= user.created_at.strftime('%b %d') %></p>
+      <!-- http://stackoverflow.com/questions/1086360/how-do-i-wrap-link-to-around-some-html-ruby-code -->
+
+        <h2>Email: <%= user.email %></h2>
+        <h2>Role: <%= user.role.name %></h2>
+
+
+    </div>
+    <% end %>
+  </div>
+</div>

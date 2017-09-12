@@ -3,8 +3,13 @@
 
         <h1>User's Profile: <%= current_user.email %></h1>
         <p class="user_email">Email: <%= current_user.email%></p>
+        <p class="user_email">Role: <%= current_user.role.name.capitalize%></p>
         <p class="btn"><%= link_to "Edit", '/users/edit' %></p>
         <p class="btn"><%= link_to "Delete Account",'/users', method: 'delete' %></p>
+        <% if current_user.role.name == 'admin' %>
+        <p class="btn"><%= link_to "All Users",'/users'%></p>
+        <% end %>
+
 
 
   </div>

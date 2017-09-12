@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get '/profile' => 'pages#profile', as: :profile
 
+  get '/users' => 'users#index', as: :indexing
+
   resources :articles
 
   resources :news

@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  before_action :require_banned
+
   def index
     @news = New.all
     @user = current_user

@@ -4,9 +4,12 @@
     <h2><%= @article.title %></h2>
     <p class="author">by <%= @article.author %></p>
     <p class="article_content"><%= @article.body %></p>
-    <% if current_user %>
+    <% unless current_user.role.name == 'viewer' %>
       <p class="btn"><%= link_to "Edit", edit_article_path %></p>
+      <% if current_user.role.name == 'admin' %>
       <p class="btn"><%= link_to "Delete", article_path, method: 'delete' %></p>
+      <% end %>
     <% end %>
+    <p class="btn"><%= link_to "Back", articles_path %></p>
   </div>
 </div>
