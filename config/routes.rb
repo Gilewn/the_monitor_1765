@@ -19,5 +19,19 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  # api
+  namespace :api do
+    namespace :v1 do
+      resources :sessions, only: %i[create show]
+      resources :users, only: %i[index create show update destroy] do
+        post :activate, on: :collection
+        resources :followers, only: %i[index destroy]
+        resources :followings, only: %i[index destroy] do
+          post :create, on: :member
+        end
+        resource :feed, only: [:show]
+      end
+      resources :microposts, only: %i[index create show update destroy]
+    end
+  end
 end
