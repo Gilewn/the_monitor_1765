@@ -82,7 +82,7 @@
    <h3 class="ui-widget-header ui-corner-all"><a href="/articles">All Articles</a></h3>
    <div class="lside">
    <% @articles.each do |f| %>
-   <div class="article">
+   <div class="article_left">
      <p class="date"><%= f.created_at.strftime('%b %d') %></p>
      <%= link_to article_path(f) do %>
      <h2><%= f.title %></h2>
@@ -95,7 +95,7 @@
 
    <div class="rside">
    <% @articles_side.each do |f| %>
-   <div class="article">
+   <div class="article_right">
      <p class="date"><%= f.created_at.strftime('%b %d') %></p>
      <%= link_to article_path(f) do %>
      <h2><%= f.title %></h2>

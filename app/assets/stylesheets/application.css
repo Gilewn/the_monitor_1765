@@ -112,7 +112,7 @@
 .public {
    font-size: 50px;
    height: 50px;
-   width: 255px;
+   width: 650px;
    line-height: 50px;
    margin: 30px 0;
    color: #282828;
@@ -133,7 +133,7 @@
    border-bottom: 1px solid #282828;
    margin: 0 50px 50px;
    padding: 0 0 50px;
-   width: 200px;
+   width: 600px;
  }
 
  .lside {
@@ -142,10 +142,24 @@
    height: 600px;
  }
 
+ .article_left {
+   border-bottom: 1px solid #282828;
+   margin: 0 50px 50px;
+   padding: 0 0 50px;
+   width: 200px;
+ }
+
  .rside {
    width: 45%;
    float: right;
    height: 600px;
+ }
+
+ .article_right {
+   border-bottom: 1px solid #282828;
+   margin: 0 50px 50px;
+   padding: 0 0 50px;
+   width: 200px;
  }
 
  .article a {
