@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   resources :articles
 
-  resources :news
+  resources :news, only: %i[index show]
 
   get 'users/signup' => 'users#new'
 
