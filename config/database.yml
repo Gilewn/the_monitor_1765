@@ -11,8 +11,7 @@ default: &default
 
 development:
   <<: *default
-    adapter: postgresql
-    database: the_monitor_1765_database_production
+  database: db/development.sqlite3
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
