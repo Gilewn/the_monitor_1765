@@ -12,6 +12,10 @@ class PagesController < ApplicationController
     end
   end
 
+  def show
+    @new = New.find(params[:id])
+  end
+
   def profile
     render 'devise/profile' if current_user.email
   end
