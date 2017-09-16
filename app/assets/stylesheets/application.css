@@ -22,9 +22,9 @@
  }
 
  body {
-   background: #fff url("http://antonzeven.nl/wp-content/uploads/2016/01/nieuwe2.jpg") no-repeat center center;
+   /*background: #fff url("http://antonzeven.nl/wp-content/uploads/2016/01/nieuwe2.jpg") no-repeat center center;*/
    background-size: cover;
-   color: #fff;
+   color: #000;
    font-family: 'Roboto Slab', serif;
    height: 100%;
    width: 100%;

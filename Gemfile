@@ -66,3 +66,5 @@ gem "paperclip", "~> 5.0.0"
 gem 'tinymce-rails'
 gem 'mailboxer'
 gem 'active_model_serializers', '~> 0.10.6'
+gem 'httparty'
+gem 'hashie'
