@@ -22,9 +22,9 @@
  }
 
  body {
-   /*background: #fff url("http://antonzeven.nl/wp-content/uploads/2016/01/nieuwe2.jpg") no-repeat center center;*/
-   background-size: cover;
-   color: #000;
+   background: #fff url("https://previews.123rf.com/images/dutourdumonde/dutourdumonde1112/dutourdumonde111200011/11365561-White-brick-wall-background-Stock-Photo.jpg") repeat center center;
+   background-size:contain;
+   color: #fff;
    font-family: 'Roboto Slab', serif;
    height: 100%;
    width: 100%;
@@ -49,7 +49,7 @@
    border-bottom: 2px solid #770000;
    border-bottom-width: thick;
    border-bottom-style: groove;
-   background-image: url('https://i.pinimg.com/originals/d4/a0/8b/d4a08b04f51a6ed58968df43f87b9d25.jpg');
+   background-image: url('http://1-background.com/images/brick/black-brick-old%20brick-wall-background.jpg');
  }
 
  .header h1 {
@@ -57,7 +57,7 @@
    height: 200px;
    line-height: 200px;
    margin: 30px 0;
-   color: #000;
+   color: #b7b7b2;
  }
 
  .header a {
@@ -85,7 +85,7 @@
 
  .nav ul li a, .btn a, form input.btn-submit {
    background: rgba(255,255,255,0.25);
-   color: #282828;
+   color: #b7b7b2;
    display: block;
    min-width: 80px;
    padding: 6px 20px;
@@ -149,6 +149,10 @@
    width: 200px;
  }
 
+ .article_left h2, .article_left p {
+   color: #b7b7b2;
+ }
+
  .rside {
    width: 45%;
    float: right;
@@ -160,6 +164,10 @@
    margin: 0 50px 50px;
    padding: 0 0 50px;
    width: 200px;
+ }
+
+ .article_right h2, .article_right p {
+   color: #b7b7b2;
  }
 
  .article a {
@@ -180,6 +188,12 @@
    color: #282828;
    font-size: 40px;
    line-height: 50px;
+   text-transform: capitalize;
+ }
+
+ .article h3 {
+   color: #282828;
+   font-size: 20px;
    text-transform: capitalize;
  }
 

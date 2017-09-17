@@ -3,21 +3,16 @@ class PagesController < ApplicationController
   # include HTTParty
 
   def index
-    # @news = New.all
-    # @user = current_user
-    # @articles = Article.order(created_at: :desc).limit(2)
-    # if current_user
-    #   @articles_side = @user.articles.limit(2)
-    # else
-    #   @articles_side = Article.order(updated_at: :desc).limit(2)
-    # end
-    # byebug
-    # params[:category] = 'techcrunch' unless params[:category].exists
+    @user = current_user
+    @articles = Article.order(created_at: :desc).limit(2)
+    if current_user
+      @articles_side = @user.articles.limit(2)
+    else
+      @articles_side = Article.order(updated_at: :desc).limit(2)
+    end
 
     params[:category] = 'techcrunch' if params[:category].nil?
     @news = Hashie::Mash.new(HTTParty.get("https://newsapi.org/v1/articles?source=#{params[:category]}&apiKey=4019ed950c264a15ac44ac4bb4bde7dd"))
-    # render json: @news
-    # @news = Testart.all
   end
 
   def show
