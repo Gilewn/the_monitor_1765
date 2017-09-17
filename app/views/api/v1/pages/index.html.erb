@@ -1,0 +1,13 @@
+<% if @news %>
+<% @news.articles.each do |f| %>
+<div class="article">
+  <h3><%= @news.source %></h3>
+  <p class="date"><%= f.publishedAt %></p>
+  <h2><%= f.title %></h2>
+  <p class="author"><%= f.author %></p>
+  <p class="article_content"><%= f.description %></p>
+  <h3><%= button_to 'Link to Article', f.url %></h3>
+  <p class="new_image"><%= image_tag  f.urlToImage, size: "560x400" %></p>
+</div>
+<% end %>
+<% end %>
