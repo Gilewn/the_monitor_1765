@@ -7,6 +7,7 @@
 
         <h2>Email: <%= user.email %></h2>
         <h2>Role: <%= user.role.name %></h2>
+        <%=link_to 'delete',destroy_user_path(user),method: :delete%>
 
 
     </div>

@@ -11,7 +11,13 @@ class PagesController < ApplicationController
     # else
     #   @articles_side = Article.order(updated_at: :desc).limit(2)
     # end
-    @news = Hashie::Mash.new(HTTParty.get('https://newsapi.org/v1/articles?source=techcrunch&apiKey=4019ed950c264a15ac44ac4bb4bde7dd'))
+    # byebug
+    # params[:category] = 'techcrunch' unless params[:category].exists
+
+    params[:category] = 'techcrunch' if params[:category].nil?
+    @news = Hashie::Mash.new(HTTParty.get("https://newsapi.org/v1/articles?source=#{params[:category]}&apiKey=4019ed950c264a15ac44ac4bb4bde7dd"))
+    # render json: @news
+    # @news = Testart.all
   end
 
   def show

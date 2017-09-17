@@ -1,13 +1,10 @@
+
+<%if @news%>
 <ul>
+  <li><%=@news.source%></li>
 <%@news.articles.each do |new|%>
   <li><%=new.author%></li>
   <li><%=new.description%></li>
-  <li><%=new.description%></li>
 <%end%>
 </ul>
-
-
-
-<div>
-  <%=@news%>
-</div>
+<%end%>

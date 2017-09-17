@@ -18,10 +18,12 @@ Rails.application.routes.draw do
   get '/login' => 'sessions#new'
 
   devise_for :users
+  match 'users/:id' => 'users#destroy', :via => :delete, :as => :destroy_user
 
   # api
   namespace :api do
     namespace :v1 do
+      resources :pages
       resources :sessions, only: %i[create show]
       resources :users, only: %i[index create show update destroy] do
         post :activate, on: :collection
