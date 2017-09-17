@@ -78,12 +78,12 @@
    top: 25px;
  }
 
- .nav ul li {
+ .nav ul li, .api_nav ul li {
    display: inline-block;
    font-weight: 300;
  }
 
- .nav ul li a, .btn a, form input.btn-submit {
+ .nav ul li a, .btn a, form input.btn-submit, .api_nav ul li a, .btn a, form input.btn-submit {
    background: rgba(255,255,255,0.25);
    color: #b7b7b2;
    display: block;
@@ -94,10 +94,19 @@
    transition: background 1s;
  }
 
- .nav ul li a:hover, .article a h2:hover, .btn a:hover, form input.btn-submit:hover {
+ .nav ul li a:hover, .article a h2:hover, .btn a:hover, form input.btn-submit:hover, .api_nav ul li a:hover, .btn a:hover {
    background: rgba(255,255,255,1);
    cursor: pointer;
    transition: background 1s;
+ }
+
+ .api_nav ul {
+   list-style: none;
+   position: absolute;
+   right: 25px;
+   text-align: right;
+   text-transform: lowercase;
+   top: 150px;
  }
 
  #email {
@@ -213,6 +222,7 @@
    display: block;
    font-weight: 300;
    margin: 0 0 4px;
+   color: #000;
  }
 
  .edit {
@@ -237,6 +247,10 @@
    font-size: 40px;
    line-height: 50px;
    text-transform: capitalize;
+ }
+
+ .profile .btn a {
+   color: #000;
  }
 
 .user_email {

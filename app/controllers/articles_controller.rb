@@ -2,6 +2,7 @@ class ArticlesController < ApplicationController
   before_action :authenticate_user!, only: %i[show new]
   before_action :require_moderator, only: %i[edit update]
   before_action :require_admin, only: %i[destroy]
+  before_action :require_banned
 
   def show
     @article = Article.find(params[:id])

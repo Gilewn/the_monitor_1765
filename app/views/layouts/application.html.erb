@@ -21,6 +21,17 @@
           <h1>The <span class="dark">M</span>onitor <span class="light">1765</h1>
         <% end %>
 
+        <div class="api_nav">
+          <% if current_user %>
+          <ul>
+            <li><%= link_to "techcrunch", 'http://localhost:3000/?category=techcrunch' %></li>
+            <li><%= link_to "the next web", 'http://localhost:3000/?category=the-next-web' %></li>
+            <li><%= link_to "bbc news", 'http://localhost:3000/?category=bbc-news' %></li>
+            <li><%= link_to "national geographic", 'http://localhost:3000/?category=national-geographic' %></li>
+          </ul>
+          <% end %>
+        </div>
+
         <div class="nav">
 
           <% if current_user %>

@@ -16,6 +16,7 @@ class ApplicationController < ActionController::Base
     if current_user && current_user.email == 'banned@bannedmail.ban'
       current_user.role_id = 4
       sign_out if current_user.role.name == 'banned'
+      redirect_to '/'
     end
   end
 
