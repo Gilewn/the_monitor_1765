@@ -22,7 +22,7 @@
  }
 
  body {
-   background: #fff url("https://previews.123rf.com/images/dutourdumonde/dutourdumonde1112/dutourdumonde111200011/11365561-White-brick-wall-background-Stock-Photo.jpg") repeat center center;
+   background: #fff url("body_background.jpg") repeat center center;
    background-size:contain;
    color: #fff;
    font-family: 'Roboto Slab', serif;
@@ -49,7 +49,7 @@
    border-bottom: 2px solid #770000;
    border-bottom-width: thick;
    border-bottom-style: groove;
-   background-image: url('http://1-background.com/images/brick/black-brick-old%20brick-wall-background.jpg');
+   background-image: url("header_background.jpg");
  }
 
  .header h1 {
