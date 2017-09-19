@@ -20,6 +20,10 @@ Rails.application.routes.draw do
   devise_for :users
   match 'users/:id' => 'users#destroy', :via => :delete, :as => :destroy_user
 
+  resources :users do
+    resources :comments
+  end
+
   # api
   namespace :api do
     namespace :v1 do
