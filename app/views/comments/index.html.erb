@@ -1,0 +1,6 @@
+<div>
+  <h1>All comments</h1>
+  <%= @comments.each do |f| %>
+  <p><%= link_to f.body, user_comment_path(@user, f)  %></p>
+  <% end %>
+</div>

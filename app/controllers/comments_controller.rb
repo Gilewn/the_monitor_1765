@@ -7,6 +7,7 @@ class CommentsController < ApplicationController
 
   def index
     @comments = @user.comments
+    @all_comments = Comment.order(created_at: :desc).all
   end
 
   def show
@@ -51,7 +52,7 @@ class CommentsController < ApplicationController
       format.html { redirect_to [@user, @comment], notice: 'Comment was successfully destroyed.' }
       format.json { head :no_content }
     end
-
+  end
 
   private
 

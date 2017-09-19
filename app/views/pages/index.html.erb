@@ -13,7 +13,11 @@
       <p class="author"><%= f.author %></p>
       <p class="article_content"><%= f.description %></p>
       <h3><%= button_to 'Link to Article', f.url %></h3>
-      <p class="new_image"><%= image_tag  f.urlToImage, size: "560x400" %></p>
+      <% if f.urlToImage.nil? %>
+        <p><%= link_to 'No image', f.url %></p>
+      <% else %>
+        <p class="new_image"><%= image_tag  f.urlToImage, size: "560x400" %></p>
+      <% end %>
     </div>
     <% end %>
     <% end %>
