@@ -1,6 +1,14 @@
-<div>
-  <h1>All comments</h1>
-  <%= @comments.each do |f| %>
-  <p><%= link_to f.body, user_comment_path(@user, f)  %></p>
-  <% end %>
+<div class="row">
+  <div class="col-lg-6">
+    <%= form_for([@user, @comment]) do |f| %>
+    <%= f.text_field :body, :placeholder => 'share your thoughts'%>
+    <%= f.submit :post, :class => 'btn' %>
+    <% end %>
+
+
+
+      <% @all_comments.each do |p| %>
+      <li><%= p.body  %></li>
+      <% end %>
+    </div>
 </div>
