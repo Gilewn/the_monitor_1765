@@ -1,13 +1,18 @@
 class CommentsController < ApplicationController
   before_action :get_user
+  # before_action :get_article
 
   def get_user
     @user = User.find(params[:user_id])
   end
 
+  # def get_article
+  #  @article = Article.find(params[:article_id])
+  # end
+
   def index
     @comment = Comment.new
-    @comments = @user.comments
+    # @comments = @user.comments
     @all_comments = Comment.order(created_at: :desc).all
   end
 
@@ -24,10 +29,11 @@ class CommentsController < ApplicationController
   def create
     @comment = @user.comments.new(comment_params)
     @all_comments = Comment.order(created_at: :desc).all
+    # @article.id = @user.comments.find(params[:article_id])
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to [@user, @comment], notice: 'Comment was successfully created.' }
+        format.html { redirect_to user_comments_url, notice: 'Comment was successfully created.' }
         format.json { render :index, status: :created, location: [@user, @comment] }
       else
         format.html { render :index }
