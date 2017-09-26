@@ -301,3 +301,7 @@
  a {
    color: #282828;
  }
+
+ .article_background {
+   background-image: url("article_background.jpg");
+ }
