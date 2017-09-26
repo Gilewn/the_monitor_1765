@@ -13,11 +13,7 @@
       <p class="author"><%= f.author %></p>
       <p class="article_content"><%= f.description %></p>
       <h3><%= button_to 'Link to Article', f.url %></h3>
-      <% if f.urlToImage.nil? %>
-        <p><%= link_to 'No image', f.url %></p>
-      <% else %>
-        <p class="new_image"><%= image_tag  f.urlToImage, size: "560x400" %></p>
-      <% end %>
+      <p class="new_image"><%= image_tag  f.urlToImage, size: "560x400" %></p>
     </div>
     <% end %>
     <% end %>
@@ -78,7 +74,7 @@
      }
 
      // Run the effect
-     $( "#effect" ).addClass('article_background').toggle( selectedEffect,{ direction: "right" }, options, 500 );
+     $( "#effect" ).css({"background-image": "url('http://1-background.com/images/brick/black-brick-old%20brick-wall-background.jpg')"}).toggle( selectedEffect,{ direction: "right" }, options, 500 );
     };
 
    // Set effect from select menu value

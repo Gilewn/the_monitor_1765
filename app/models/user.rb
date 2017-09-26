@@ -5,7 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :articles, dependent: :destroy
-  has_many :comments
   belongs_to :role
   before_create :set_default_role
   # or
